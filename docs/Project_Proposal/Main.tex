@@ -1,0 +1,229 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simple Sectioned Essay Template
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing essay content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[hidelinks, 12pt]{article} % Default font size is 12pt, it can be changed here
+
+\usepackage{geometry} % Required to change the page size to A4
+%\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+
+\usepackage{graphicx} % Required for including pictures
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+	\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+	\usepackage{setspace} % To control linespacing
+	\usepackage{enumerate} % For enumerating lists
+	\usepackage{enumitem} % more enumerating stuff
+	\usepackage{multicol} % for multicoumn formating
+	\usepackage{multirow} % for multicoumn formating
+	\usepackage{adjustbox}
+	\usepackage{changepage}
+	\usepackage{fancyhdr}
+	\usepackage[dvipsnames]{xcolor} %To change text colors, color options located at: http://en.wikibooks.org/wiki/LaTeX/Colors
+	\usepackage[font={footnotesize}]{caption}
+	\usepackage[labelfont=bf]{caption}
+	\usepackage{longtable}
+	\usepackage{tabularx}
+	\usepackage{arydshln}
+	\usepackage{titlesec} % To control section colors
+	\usepackage{color}
+	\usepackage[pdfencoding=auto, psdextra]{hyperref} % for web links
+	\DeclareUnicodeCharacter{2212}{-}
+	\DeclareUnicodeCharacter{2032}{'}
+	
+	\usepackage{soul}% for the underlining 
+	\usepackage{frcursive}
+	\usepackage{indentfirst}
+	\usepackage{pdfpages}
+	\usepackage{amsmath} % For other equations
+	\usepackage{pgfplots} % For ploting graphs
+	\pgfplotsset{width=15cm,compat=1.9}
+	
+	
+	\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+	
+	\linespread{1.2} % Line spacing
+	\widowpenalty=8999 
+	\clubpenalty=8999
+	
+	%Command for tabs
+	\newcommand{\tab}{\hspace{20pt}}
+	
+	\usepackage[toc, acronym, nopostdot, nonumberlist]{glossaries}
+	\input{glossary}
+	
+	%%%%% Define PSU official colors
+	\definecolor{PSUgreen}{RGB}{106,127,16}
+	\definecolor{PSUltgreen}{RGB}{168,180,0}
+	\definecolor{PSUblue}{RGB}{0,117,154}
+	\definecolor{PSUltblue}{RGB}{161,216,224}
+	\definecolor{PSUgray}{RGB}{71,67,52}
+	\definecolor{PSUBrown}{RGB}{96,53,29}
+	\definecolor{PSUsienna}{RGB}{163,63,31}
+	\definecolor{PSUred}{RGB}{210,73,42}
+	\definecolor{PSUorange}{RGB}{220,155,50}
+	\definecolor{PSUyellow}{RGB}{230,220,143}
+	\definecolor{PSUtan}{RGB}{232,221,162}
+	\definecolor{PSUpurple}{RGB}{101,3,96}
+	
+	%----------------------------------------------------------------------------------------
+	%  Section Colors
+	%----------------------------------------------------------------------------------------
+	\titleformat{\section}
+	{\color{PSUgreen}\normalfont\Large\bfseries}
+	{\color{PSUgreen}\thesection}{1em}{}
+	
+	\titleformat{\subsection}
+	{\color{black}\normalfont\large\bfseries}
+	{\color{black}\thesubsection}{1em}{}
+	
+	\titleformat{\subsubsection}
+	{\color{PSUblue}\normalfont\normalsize\bfseries}
+	{\color{PSUblue}\thesubsubsection}{1em}{}
+	
+	\titleformat{\subparagraph}
+	{\color{PSUblue}\normalfont\normalsize\bfseries}
+	{\color{PSUblue}\thesubsubsection}{1em}{}
+	
+	%----------------------------------------------------------------------------------------
+	%  Watermark
+	%----------------------------------------------------------------------------------------
+	%\usepackage{draftwatermark} % for watermarks
+	%\SetWatermarkText{\textbf{DRAFT}}
+	%\SetWatermarkScale{5}
+	%\SetWatermarkColor[gray]{0.9}
+	%----------------------------------------------------------------------------------------
+	\begin{document}
+		\pagestyle{fancy}
+		%----------------------------------------------------------------------------------------
+		%	TITLE PAGE
+		%----------------------------------------------------------------------------------------
+		
+		\begin{titlepage}
+			\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+			\center % Center everything on the page
+			
+			\HRule \\[0.4cm]
+			{ \huge \color{PSUgreen}\bfseries Project Proposal for \texorpdfstring{\gls{bms}}{Battery Management System (BMS)} \\[0.4cm] \Large \emph{Sponsored by \texorpdfstring{\gls{vms}}{Viking Motorsports (VMS)}}}\\[0.4cm] % Title of your document
+			\HRule \\[1.5cm]
+			
+			\textsc{\large Portland State University \\ Maseeh College of Engineering \& Computer Science \\ Department of Electrical \& Computer Engineering}\\[1.5cm]
+			
+			\begin{minipage}{0.4\textwidth}
+				\large
+				\emph{Authors:}\\
+				Student1 \textsc{Jose Ramirez}\\
+				Student2 \hspace{-3pt}\textsc{Hussein Khodor}\\
+				Student3 \textsc{David Fransis}\\
+				Student4 \hspace{-1pt}\textsc{Fangdong Yuan}\\
+				{\large \today} % Date
+				%{\large October 1, 2013} 
+				%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+			\end{minipage}\\[0.5cm]
+			\vfill % Fill the rest of the page with whitespace
+			\includegraphics[width=3.5in]{psuMCECSlogo_horiz.png}
+			\vfill
+			\textsc{\color{PSUgray}\normalsize ECE Capstone \\ Senior Project Development}\\[0.5cm] % Major heading such as course name
+			
+		\end{titlepage}
+		
+		%----------------------------------------------------------------------------------------
+		%	Header
+		%----------------------------------------------------------------------------------------
+		\fancyhf{}  % clears the default page numbering
+		\fancyhead[L]{\footnotesize{\textcolor{PSUgray}{Project Proposal}}}
+		%\fancyhead[C]{\footnotesize{center head}}
+		\fancyhead[R]{\footnotesize{\textcolor{PSUgray}{PSU ECE Capstone}}}
+		%----------------------------------------------------------------------------------------
+		%    Footer
+		%----------------------------------------------------------------------------------------
+		%\patchcmd{\footrule}{\hrule}{\color{PSUgreen}\hrule}{}{}
+		\renewcommand{\footrulewidth}{0.4pt}
+		\fancyfoot[L]{\footnotesize\color{PSUgray}\sffamily
+			1930 SW 4$^{th}$ Ave, EB 102, Portland, OR 97201 \textbullet\ \href{https://www.pdx.edu/electrical-computer-engineering/}{www.pdx.edu/electrical-computer-engineering/}}
+		%\fancyfoot[C]{~}
+		\fancyfoot[R]{\footnotesize~\newline\color{PSUgray}\sffamily\thepage}
+		
+		%----------------------------------------------------------------------------------------
+		%    TABLE OF CONTENTS
+		%----------------------------------------------------------------------------------------
+		\setcounter{tocdepth}{3}
+		\tableofcontents % Include a table of contents
+		%\setlength{\parskip}{3ex plus 2ex minus 2ex}
+		
+		%----------------------------------------------------------------------------------------
+		%    Section: List of Figures & Tables
+		%----------------------------------------------------------------------------------------
+		\newpage
+		\listoffigures
+		%\newpage
+		%\listoftables
+		\pagebreak
+		
+		%----------------------------------------------------------------------------------------
+		%   Section: Executive Summary
+		%----------------------------------------------------------------------------------------
+		\newpage
+		\section{Executive Summary}
+		\label{Executive_Summary}
+		\input{Section_1}
+		\pagebreak
+		
+		%----------------------------------------------------------------------------------------
+		%   Section: Background and Research
+		%----------------------------------------------------------------------------------------
+		\newpage
+		\section{Background and Research}
+		\label{Background_and_Research}
+		\input{Section_2}
+		\pagebreak
+		
+		%----------------------------------------------------------------------------------------
+		%   Section: Product Design Specification
+		%----------------------------------------------------------------------------------------
+		\newpage
+		\section{Product Design Specification}
+		\label{Product_Design_Specification}
+		\input{Section_3}
+		\pagebreak
+		
+		%----------------------------------------------------------------------------------------
+		%   Section 4: Project Management Plan
+		%----------------------------------------------------------------------------------------
+		\newpage
+		\section{Project Management Plan}
+		\label{Project_Management_Plan}
+		\input{Section_4}
+		\pagebreak
+		
+		%----------------------------------------------------------------------------------------
+		%   Section 5: Signatures
+		%----------------------------------------------------------------------------------------
+		\newpage
+		\section{Signatures}
+		\label{Signatures}
+		\input{Section_5}
+		\pagebreak
+		
+		%----------------------------------------------------------------------------------------
+		%    Section: Glossary
+		%----------------------------------------------------------------------------------------
+		\newpage
+		\printglossary[type=\acronymtype]
+		\pagebreak
+		
+		
+	\end{document}

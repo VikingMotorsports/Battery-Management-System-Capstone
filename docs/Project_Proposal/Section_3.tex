@@ -1,0 +1,157 @@
+\subsection{Product Overview}
+This paper provides a holistic overview of Li-ion battery technology and the complete scope of a \gls{bms}. It systematically covers core \gls{bms} functions critical to our project, such as cell condition monitoring, state estimation (SOC/SOH), charge/discharge control, protection circuitry, cell equalization, and thermal management. It is particularly valuable for understanding the interdependencies between different \gls{bms} subsystems and for identifying key challenges, such as managing temperature gradients and diagnosing faults, which are actively relevant to the harsh, high-vibration environment of a Formula SAE vehicle.
+
+\subsection{Stackholders}
+Our stakeholders include everyone who is directly or indirectly affected by the accumulator and \gls{bms} system. At the top level, we have our industry and university sponsors, who provide funding, facilities, and oversight, and care about safety, and reliability. The vehicle team are key users of our design: they integrate the pack into frame, rely on our interfaces, and depend on our documentation to build and service the system. Future student teams who will build, maintain, and possibly upgrade the pack are another important group, because our documentation will either make their work easier or harder.
+
+\subsection{Requirements}
+
+Must:
+\begin{itemize}
+	\item Continuously monitor all cell voltages and pack temperature.
+	\item Provide reliable overvoltage, undervoltage, and overcurrent protection.
+	\item Support both active and passive cell balancing.
+	\item Communicate with the ECU over the CAN bus.
+	\item Operate within SAE EV voltage limits and isolation standards.
+	\item Include a fail-safe shutdown or interlock function for critical faults.
+\end{itemize}
+
+Should:
+\begin{itemize}
+	\item Include onboard data logging capability.
+	\item Use modular architecture to scale for different battery pack sizes.
+	\item Support self-diagnostic startup and fault recovery routines.
+\end{itemize}
+
+May:
+\begin{itemize}
+	\item Include an integrated display or diagnostic interface for local readings.
+	\item Support wireless telemetry or USB debugging for testing.
+\end{itemize}
+
+\subsection{Initial Product Design}
+
+\subsubsection{Hardware Architecture Block Diagram}
+\begin{figure}[H]
+	\includegraphics[width=0.75\linewidth]{BMS_L0_Diagram.jpg}
+	\caption{L0 Diagram}
+	\label{fig:BMS-L0}
+\end{figure}
+\begin{table}[H]
+	\begin{tabular}{|l|l|}
+		\hline
+		Module        & Battery Management System                                                                                                                                                      \\ \hline
+		Inputs        & \begin{tabular}[c]{@{}l@{}}Cell Voltage {[}0:N-1;0:M-1{]}, Cell Current {[}0:N-1;0:M-1{]}, \\ Cell Temperature {[}0:N-1;0:M-1{]}, and Power, Battery Pack Voltage\end{tabular} \\ \hline
+		Outputs       & CAN-FD Bus, Shutdown Circuit (SC) Signal, and Excess Heat                                                                                                                      \\ \hline
+		Functionality & \begin{tabular}[c]{@{}l@{}}Monitors for critical faults, reports measurement \& faults to the ECU, \\ and balances charge across the battery.\end{tabular}                     \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+	\includegraphics[width=0.75\linewidth]{BMS_L1_Diagram.jpg}
+	\caption{L1 Diagram}
+	\label{fig:BMS-L1}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=0.75\linewidth]{BMS_L1_Diagram--Cell_Module.jpg}
+	\label{fig:BMS-L1-CM}
+\end{figure}
+\begin{table}[H]
+	\begin{tabular}{|l|l|}
+		\hline
+		Module        & Cell Module                                                                                                                                                                                                                                                                                                                     \\ \hline
+		Inputs        & Cell Voltage, Cell Current, Cell Temperature, and 3.3V Power                                                                                                                                                                                                                                                                    \\ \hline
+		Outputs       & \gls{bms} CAN Bus and Excess Heat                                                                                                                                                                                                                                                                                                     \\ \hline
+		Functionality & \begin{tabular}[c]{@{}l@{}}Measure the Voltage, Current and Temperature \\ and convert them into digital data \\ with the specific cell number that is sent to the Data Processing Unit. \\ A resistor in the module passively balances the cell's voltage \\ to be constant by dissipating excess charge as heat.\end{tabular} \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+	\includegraphics[width=0.75\linewidth]{BMS_L1_Diagram--Data_Processing_Unit.jpg}
+	\label{fig:BMS-L1-DPU}
+\end{figure}
+\begin{table}[H]
+	\begin{tabular}{|l|l|}
+		\hline
+		Module        & Data Processing Unit                                                                                                                                                                                                                                                                                      \\ \hline
+		Inputs        & \gls{bms} Can Bus and 5.5V Power                                                                                                                                                                                                                                                                                \\ \hline
+		Outputs       & CAN-FD Bus                                                                                                                                                                                                                                                                                                \\ \hline
+		Functionality & \begin{tabular}[c]{@{}l@{}}Collects all of the measurements from the Cell Modules and formats the data \\ into a format accepted by the ECU to be sent over the CAN-FD Bus. \\ If any major fault like Overvoltage is detected \\ it will open the shutdown circuit to turn off the vehicle.\end{tabular} \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsubsection{Software Architecture}
+This system will be programmed in Embedded C. The following Data flow table describes how the program will function.
+
+\begin{table}[H]
+	\hspace{-75pt}\begin{tabular}{|l|l|l|}
+		\hline
+		Module                               & Inputs                                                                                                                      & Outputs                                                                                                                             \\ \hline
+		Measurement \& Filtering             & \begin{tabular}[c]{@{}l@{}}Raw cell voltages, \\ pack voltage, \\ pack current, \\ temperature sensor readings\end{tabular} & \begin{tabular}[c]{@{}l@{}}Filtered cell voltages, \\ pack current, \\ pack temperature\end{tabular}                                \\ \hline
+		Balancing controller                 & \begin{tabular}[c]{@{}l@{}}Cell voltages, \\ balancing thresholds, \\ fault status\end{tabular}                             & \begin{tabular}[c]{@{}l@{}}Balancing enable signals/ duty\textbackslash\\  to each monitored cell or group\end{tabular}             \\ \hline
+		CAN-FD communication                 & \begin{tabular}[c]{@{}l@{}}Measurements, \\ SOC/SOH, \\ Fault status, \\ config data\end{tabular}                           & \begin{tabular}[c]{@{}l@{}}CAN-FD frames to ECU \\ (telemetry, warnings, faults), \\ received config/commands from ECU\end{tabular} \\ \hline
+		Fault Detection and Protection Logic & \begin{tabular}[c]{@{}l@{}}Filtered measurements, \\ SOC/SOH, \\ configuration limits, \\ IMD/shutdown status\end{tabular}  & \begin{tabular}[c]{@{}l@{}}Fault flags, warnings, \\ shutdown request to contractors/\\ shutdown circuit\end{tabular}               \\ \hline
+	\end{tabular}
+	\vspace{10pt}
+	\hspace{-75pt}\begin{tabular}{|l|l|}
+		\hline
+		Module                               & Functionality                                                                                                                                                 \\ \hline
+		Measurement \& Filtering             & \begin{tabular}[c]{@{}l@{}}Reads all sensors and AFE data, \\ applies basic filtering/scaling, \\ and produces clean measurement values\end{tabular}          \\ \hline
+		Balancing controller                 & \begin{tabular}[c]{@{}l@{}}Decides when and which cells to balance, \\ incurring balancing only occurs in allowed conditions\end{tabular}                     \\ \hline
+		CAN-FD communication                 & \begin{tabular}[c]{@{}l@{}}Packages internal state into CAN-FD messages from the ECU \\ and applies configuration or commands received over CAN.\end{tabular} \\ \hline
+		Fault Detection and Protection Logic & \begin{tabular}[c]{@{}l@{}}Compares measurements against limits, \\ detects unsafe conditions, \\ laches faults, and requests safe shutdown\end{tabular}      \\ \hline
+	\end{tabular}
+\end{table}
+
+Our system is not something the driver uses directly like an app, but it supports them through clear feedback and safe, automatic behavior. A typical driver turns on the car, and the system quietly checks all cells, and temperatures, and insulations; if everything is okay, it closes the contactors and allows the ECU to enable torque. If a fault occurs (for example, a cell overheats or voltage goes out of range), the \gls{bms} immediately opens the shutdown circuit, sends a fault message over CAN, and the driver sees a warning on the display.
+
+\subsection{Verification Plans}
+We’re going to generate certain voltage and current values that qualify as Overvoltage, Undervoltage, and Overcurrent and the system will set the signal for the Shutdown Circuit and report each specific fault to the ECU with which specific cell(s) had the fault.
+
+\subsection{Risks}
+\begin{enumerate}
+	\item \textbf{Architectural Uncertainty (Centralized vs. Distributed)}\begin{itemize}
+		\item \textbf{The Risk:} We have not yet finalized whether to use a Centralized (simpler electronics, complex wiring) or Distributed (simpler wiring, complex communication) architecture. This decision critically affects our chip selection and PCB design. Delaying this decision could stall the entire hardware development process.
+		\item \textbf{Mitigation:} We will conduct a rapid trade-off analysis in the first two weeks. We will compare the wiring weight penalty of a Centralized system against the software complexity of a Distributed system and select the architecture that best fits our team's capabilities.
+	\end{itemize}
+	
+	\item \textbf{Complexity of Active Balancing} \begin{itemize}
+		\item \textbf{The Risk:} We aim to research Active Balancing for higher efficiency. However, we recognize that Active Balancing is significantly more complex than Passive Balancing and carries a high risk of design failure or schedule overrun.
+		\item \textbf{Mitigation (Passive-First Strategy):} We will design the system with a "Passive-First" approach, ensuring the hardware natively supports Passive Balancing as a guaranteed baseline. We will only attempt to add Active Balancing features if our initial research proves it is feasible within the timeline. If not, we will proceed with the Passive-only fallback.
+	\end{itemize}
+	
+	\item \textbf{High Voltage Safety Risk (Hardware Failure)} \begin{itemize}
+		\item \textbf{The Risk:} Designing a system for 100V-600V requires strict adherence to creepage and clearance standards. A minor error in the PCB layout or isolation barrier can lead to high-voltage arcing, destroying the microcontroller or causing a safety hazard.
+	\end{itemize}
+	
+	\item \textbf{Component Availability (Supply Chain)} \begin{itemize}
+		\item \textbf{The Risk:} Specialized \gls{bms} chips (AFEs) required for either architecture are currently prone to global shortages.
+	\end{itemize}
+	
+	\item \textbf{Existential Risks} \begin{itemize}
+		\item \textbf{The Risk:} As a student team, our availability fluctuates due to exams and other coursework. Additionally, FSAE rules may undergo minor interpretations that impact design. There is a risk that we design a perfect system on paper but run out of time to debug the physical hardware or integrate it with the vehicle.
+		\item \textbf{Mitigation:} We will prioritize a "Minimum Viable Product" (MVP) strategy—getting the simplest version working first. Comprehensive documentation will be maintained on GitHub/Drive to ensure smooth handoff to future teams.
+	\end{itemize}
+	
+	\item \textbf{Backup Plan (Fail-safe Strategy)} \begin{itemize}
+		\item \textbf{Fallback to Simplicity:} If our research into Active Balancing or Distributed Architecture proves too difficult, or if High Voltage integration becomes unsafe, our backup plan is to deliver a Low-Voltage (e.g., 48V) Passive-Balancing \gls{bms} prototype. This ensures we can still deliver a working product that meets all core Capstone requirements (Monitoring, Protection, Communication) without the risks of the full high-voltage pack.
+	\end{itemize}
+	
+	\subsection{Deliverables}
+	
+	Using the he Atlassian suite of tools which include Jira, Bitbucket, and Confluence to deliver on the following
+	
+	\begin{itemize}
+		\item Project proposal
+		\item Weekly Progress Reports
+		\item Final report
+		\item ECE Capstone Poster Session poster
+		\item Detailed design documentation, explaining what your design does, how your design works, and why you made the decisions you did
+		\item Electrical CAD: Schematics and board layouts, including output files (Gerbers, PDFs, etc)
+		\item Mechanical CAD: enclosures, mechanisms, including output files (STLs, PDFs, etc)
+		\item Bill of materials and pricing
+		\item Short user manuals documenting how to use your creation
+		\item A working prototype with a prototype battery pack and functionality with the \gls{ecu} prototype.
+	\end{itemize}
+\end{enumerate}
