@@ -80,7 +80,7 @@ void tx_irq_callback(const struct device *dev, int error, void *arg)
 		       error, sender);
 	}
 }
-
+/*
 void rx_thread(void *arg1, void *arg2, void *arg3)
 {
 	ARG_UNUSED(arg1);
@@ -92,7 +92,7 @@ void rx_thread(void *arg1, void *arg2, void *arg3)
 	};
 	const struct can_filter pl_filter = {
 		.flags = CAN_FRAME_FDF,
-		.id = MONITOR_MSG_ID
+		.id = POWER_LIM_MSG_ID
 	};
 	const struct can_filter s_filter = {
 		.flags = CAN_FRAME_FDF,
@@ -183,7 +183,7 @@ void rx_thread(void *arg1, void *arg2, void *arg3)
 		       sys_be16_to_cpu(UNALIGNED_GET((uint16_t *)&frame.data)));
 	}
 }
-
+*/
 char *state_to_str(enum can_state state)
 {
 	switch (state) {
