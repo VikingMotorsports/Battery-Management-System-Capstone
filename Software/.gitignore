@@ -1,2 +1,5 @@
+# Zephyr build output
+**/build/
+
 # Binaries
 *.o
