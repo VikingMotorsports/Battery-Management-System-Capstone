@@ -1,0 +1,8 @@
+#ifndef BQ79600_REGS_H
+#define BQ79600_REGS_H
+
+#define BQ79600_REG_CONTROL1 0x0309U
+
+#define BQ79600_CONTROL1_SEND_WAKE 0x20U
+
+#endif
