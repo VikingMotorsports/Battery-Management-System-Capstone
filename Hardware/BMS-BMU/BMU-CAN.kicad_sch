@@ -1,0 +1,91 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "4a0e317d-69e4-4443-9819-e1739e61fe03")
+	(paper "B")
+	(title_block
+		(title "BATTERY MANAGEMENT UNIT (BMU)")
+		(date "2026-04-06")
+		(rev "1.0")
+		(company "VIKING MOTOR SPORTS (VMS)")
+	)
+	(lib_symbols)
+	(hierarchical_label "MCU_CAN_TX_TO_XCVR"
+		(shape bidirectional)
+		(at 71.12 74.93 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "34ca4716-4090-4c9e-b245-94e2ea95787f")
+	)
+	(hierarchical_label "XCVR_CAN_RX_TO_MCU"
+		(shape bidirectional)
+		(at 71.12 78.74 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "408d88c6-5724-4681-bbf0-e09c1542db41")
+	)
+	(hierarchical_label "CANL"
+		(shape bidirectional)
+		(at 139.7 72.39 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "73ff503b-bcbf-4d35-bcdc-9f35b8a7d617")
+	)
+	(hierarchical_label "CANH"
+		(shape bidirectional)
+		(at 140.97 66.04 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "8fee003c-e5b8-4a6a-9958-e6ec54c0143c")
+	)
+	(hierarchical_label "CAN_STBY_CTRL"
+		(shape bidirectional)
+		(at 71.12 83.82 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "9b74dc9c-f62a-41b4-a843-cad9401ee698")
+	)
+	(hierarchical_label "CAN_GND"
+		(shape bidirectional)
+		(at 68.58 60.96 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "a489a4df-9934-4ed3-b800-f1293a2d2fd0")
+	)
+	(hierarchical_label "PWR_5V"
+		(shape bidirectional)
+		(at 68.58 54.61 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "b2d8153b-333b-4c34-bbb9-8fcf5e0ff298")
+	)
+)

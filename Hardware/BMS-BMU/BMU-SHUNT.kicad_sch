@@ -1,0 +1,80 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "7b653fc6-89e7-4bbf-8465-364c142c1780")
+	(paper "B")
+	(title_block
+		(title "BATTERY MANAGEMENT UNIT (BMU)")
+		(date "2026-04-06")
+		(rev "1.0")
+		(company "VIKING MOTOR SPORTS (VMS)")
+	)
+	(lib_symbols)
+	(hierarchical_label "SHUNT_N"
+		(shape bidirectional)
+		(at 148.59 76.2 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "19a55609-0fbf-4a16-9356-66194a5d0060")
+	)
+	(hierarchical_label "PWR_3V3"
+		(shape bidirectional)
+		(at 101.6 62.23 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "38bb6027-99e0-422e-bf63-21a67c1b2ca0")
+	)
+	(hierarchical_label "LV_GND"
+		(shape bidirectional)
+		(at 104.14 72.39 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "44383ae7-5bfa-42c0-a87b-72bdabf9c26e")
+	)
+	(hierarchical_label "I2C_SCL"
+		(shape bidirectional)
+		(at 147.32 60.96 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "571847ce-689a-42df-ba1f-07b1d4e3c867")
+	)
+	(hierarchical_label "I2C_SDA"
+		(shape bidirectional)
+		(at 148.59 68.58 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "5a6efa88-d013-4c64-be01-96f9618bbfac")
+	)
+	(hierarchical_label "SHUNT_P"
+		(shape bidirectional)
+		(at 148.59 82.55 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "e328c431-2349-4001-8a80-13c021c118f3")
+	)
+)
