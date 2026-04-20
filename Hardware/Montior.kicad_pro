@@ -224,7 +224,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "1.0"
+      "sch_revision": ""
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -433,7 +433,6 @@
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
-      "global_label_dangling": "warning",
       "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
       "isolated_pin_label": "warning",
@@ -473,7 +472,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "BMS.kicad_pro",
+    "filename": "Montior.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -507,14 +506,10 @@
   },
   "pcbnew": {
     "last_paths": {
-      "gencad": "",
       "idf": "",
       "netlist": "",
       "plot": "",
-      "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
-      "svg": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -625,59 +620,22 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "",
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
-    "space_save_all_events": true,
-    "spice_current_sheet_as_root": false,
-    "spice_external_command": "spice \"%I\"",
-    "spice_model_current_sheet_as_root": true,
-    "spice_save_all_currents": false,
-    "spice_save_all_dissipations": false,
-    "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "BMS.kicad_sch",
-        "name": "BMS",
-        "uuid": "efb70416-ce55-4766-98ba-c3d23efcccb1"
+        "filename": "Montior.kicad_sch",
+        "name": "Montior",
+        "uuid": "00000000-0000-0000-0000-000000000000"
       }
     ],
     "used_designators": "",
     "variants": []
   },
-  "sheets": [
-    [
-      "efb70416-ce55-4766-98ba-c3d23efcccb1",
-      "BMS"
-    ],
-    [
-      "72276164-1341-4c36-b4e6-9b9f0edc7f8e",
-      "BMU-POWER"
-    ],
-    [
-      "e6a80062-bf71-493b-b7d1-d8d35ceb29fd",
-      "BMU-BQ79600"
-    ],
-    [
-      "f115f1df-fd74-4b87-bcb3-90c9dd231c01",
-      "BMU-MCU"
-    ],
-    [
-      "ebb995bd-0019-4c04-a0dd-2962c6aaae17",
-      "BMU-CAN"
-    ],
-    [
-      "a5244361-9b33-4184-ac70-90b0e1995dcc",
-      "BMU-SHUNT"
-    ],
-    [
-      "c8d11c9b-a4c1-4af9-8aee-70bb73f98b17",
-      "BMU_shutdown"
-    ]
-  ],
+  "sheets": [],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {

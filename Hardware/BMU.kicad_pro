@@ -94,9 +94,9 @@
         "missing_tuning_profile": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
-        "npth_inside_courtyard": "ignore",
+        "npth_inside_courtyard": "error",
         "padstack": "warning",
-        "pth_inside_courtyard": "ignore",
+        "pth_inside_courtyard": "error",
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
         "silk_over_copper": "warning",
@@ -137,7 +137,7 @@
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
+        "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
@@ -224,7 +224,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "1.0"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -473,7 +473,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "BMS.kicad_pro",
+    "filename": "BMU.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -640,9 +640,9 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "BMS.kicad_sch",
-        "name": "BMS",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "filename": "BMU.kicad_sch",
+        "name": "BMU",
+        "uuid": "efb70416-ce55-4766-98ba-c3d23efcccb1"
       }
     ],
     "used_designators": "",
@@ -650,8 +650,32 @@
   },
   "sheets": [
     [
-      "5927a41a-6d6e-49f5-8ec2-0772454faf5b",
-      "Root"
+      "efb70416-ce55-4766-98ba-c3d23efcccb1",
+      "BMS"
+    ],
+    [
+      "72276164-1341-4c36-b4e6-9b9f0edc7f8e",
+      "BMU-POWER"
+    ],
+    [
+      "e6a80062-bf71-493b-b7d1-d8d35ceb29fd",
+      "BMU-BQ79600"
+    ],
+    [
+      "f115f1df-fd74-4b87-bcb3-90c9dd231c01",
+      "BMU-MCU"
+    ],
+    [
+      "ebb995bd-0019-4c04-a0dd-2962c6aaae17",
+      "BMU-CAN"
+    ],
+    [
+      "a5244361-9b33-4184-ac70-90b0e1995dcc",
+      "BMU-SHUNT"
+    ],
+    [
+      "c8d11c9b-a4c1-4af9-8aee-70bb73f98b17",
+      "BMU_shutdown"
     ]
   ],
   "text_variables": {},
