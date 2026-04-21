@@ -645,7 +645,7 @@
         "uuid": "efb70416-ce55-4766-98ba-c3d23efcccb1"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R14,R16,J3,J5,#PWR8-9,#PWR11,#PWR14,#PWR25-27,C14,U3",
     "variants": []
   },
   "sheets": [
@@ -675,7 +675,7 @@
     ],
     [
       "c8d11c9b-a4c1-4af9-8aee-70bb73f98b17",
-      "BMU_shutdown"
+      "BMU-shutdown"
     ]
   ],
   "text_variables": {},

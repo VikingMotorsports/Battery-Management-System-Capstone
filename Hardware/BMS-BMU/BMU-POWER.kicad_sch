@@ -2374,18 +2374,6 @@
 		(uuid "9072fc8f-e581-42d9-878f-bd5a5d8ca652")
 	)
 	(junction
-		(at 278.13 146.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "02eabbc4-e013-462b-b120-441dce566c1e")
-	)
-	(junction
-		(at 297.18 143.51)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0404bae7-1c25-4808-96a7-6da7013eceaf")
-	)
-	(junction
 		(at 162.56 163.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2398,6 +2386,12 @@
 		(uuid "151657af-4f6f-4101-a7ee-8e09324a612c")
 	)
 	(junction
+		(at 287.02 163.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1665b3a1-b47b-418f-952a-ba0e9790a5a7")
+	)
+	(junction
 		(at 204.47 163.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2408,18 +2402,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "257800e3-386a-48b0-968e-a792a71a1290")
-	)
-	(junction
-		(at 278.13 143.51)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "25f65db9-2c9e-445f-bb8d-5109c016eb4b")
-	)
-	(junction
-		(at 285.75 163.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "28060217-87fc-479a-a136-16260ed91265")
 	)
 	(junction
 		(at 264.16 132.08)
@@ -2452,6 +2434,12 @@
 		(uuid "5aec3b56-fc6e-4f1c-87ba-b5d00c013b32")
 	)
 	(junction
+		(at 278.13 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5de1b008-924d-4b98-8ce4-7469c3c5c53e")
+	)
+	(junction
 		(at 264.16 163.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2474,6 +2462,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8eb46461-67e2-4c6c-9ae0-0cbebc76a9f7")
+	)
+	(junction
+		(at 297.18 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9529d66d-f11e-444e-8cc7-84b9ec393bad")
 	)
 	(junction
 		(at 264.16 151.13)
@@ -2524,6 +2518,12 @@
 		(uuid "d511fab6-f236-4297-bcfb-fb4ed3233843")
 	)
 	(junction
+		(at 278.13 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d927d4ca-89ae-4b64-b25c-e90dc364fba2")
+	)
+	(junction
 		(at 264.16 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2553,7 +2553,7 @@
 	)
 	(wire
 		(pts
-			(xy 285.75 153.67) (xy 285.75 163.83)
+			(xy 287.02 153.67) (xy 287.02 163.83)
 		)
 		(stroke
 			(width 0)
@@ -2683,6 +2683,16 @@
 	)
 	(wire
 		(pts
+			(xy 279.4 146.05) (xy 278.13 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c63a64a-dc19-41d8-b506-5033f0bd6bda")
+	)
+	(wire
+		(pts
 			(xy 297.18 143.51) (xy 297.18 154.94)
 		)
 		(stroke
@@ -2763,17 +2773,7 @@
 	)
 	(wire
 		(pts
-			(xy 285.75 163.83) (xy 297.18 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4280eb16-2a59-4d99-860e-5a3e6bbd965c")
-	)
-	(wire
-		(pts
-			(xy 278.13 163.83) (xy 285.75 163.83)
+			(xy 278.13 163.83) (xy 287.02 163.83)
 		)
 		(stroke
 			(width 0)
@@ -2893,7 +2893,7 @@
 	)
 	(wire
 		(pts
-			(xy 297.18 143.51) (xy 293.37 143.51)
+			(xy 297.18 143.51) (xy 294.64 143.51)
 		)
 		(stroke
 			(width 0)
@@ -3010,6 +3010,16 @@
 			(type default)
 		)
 		(uuid "83aaae08-61e2-4d30-8e88-ebf783996c66")
+	)
+	(wire
+		(pts
+			(xy 287.02 163.83) (xy 297.18 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8654a829-0d00-4f2a-88ca-342f8d8dd559")
 	)
 	(wire
 		(pts
@@ -3220,6 +3230,16 @@
 			(type default)
 		)
 		(uuid "c902c888-990c-4fa3-be22-3454677eb684")
+	)
+	(wire
+		(pts
+			(xy 279.4 143.51) (xy 278.13 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9758b21-cf21-4e60-9ccd-39ab9daea01d")
 	)
 	(wire
 		(pts
@@ -5111,7 +5131,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:TLV75533PDBV")
-		(at 285.75 146.05 0)
+		(at 287.02 146.05 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5122,7 +5142,7 @@
 		(fields_autoplaced yes)
 		(uuid "ef7664f0-f36e-4f46-9709-72fac0164477")
 		(property "Reference" "U2"
-			(at 285.75 137.16 0)
+			(at 287.02 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5132,7 +5152,7 @@
 			)
 		)
 		(property "Value" "TLV75533PDBV"
-			(at 285.75 139.7 0)
+			(at 287.02 139.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5142,7 +5162,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 285.75 137.795 0)
+			(at 287.02 137.795 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5154,7 +5174,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlv755p.pdf"
-			(at 285.75 144.78 0)
+			(at 287.02 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5165,7 +5185,7 @@
 			)
 		)
 		(property "Description" "500mA Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"
-			(at 285.75 146.05 0)
+			(at 287.02 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
