@@ -645,13 +645,13 @@
         "uuid": "efb70416-ce55-4766-98ba-c3d23efcccb1"
       }
     ],
-    "used_designators": "R14,R16,J3,J5,#PWR8-9,#PWR11,#PWR14,#PWR25-27,C14,U3",
+    "used_designators": "U5,#PWR9,#PWR25,C17",
     "variants": []
   },
   "sheets": [
     [
       "efb70416-ce55-4766-98ba-c3d23efcccb1",
-      "BMS"
+      "BMU"
     ],
     [
       "72276164-1341-4c36-b4e6-9b9f0edc7f8e",
@@ -668,14 +668,6 @@
     [
       "ebb995bd-0019-4c04-a0dd-2962c6aaae17",
       "BMU-CAN"
-    ],
-    [
-      "a5244361-9b33-4184-ac70-90b0e1995dcc",
-      "BMU-SHUNT"
-    ],
-    [
-      "c8d11c9b-a4c1-4af9-8aee-70bb73f98b17",
-      "BMU-shutdown"
     ]
   ],
   "text_variables": {},
