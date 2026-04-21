@@ -473,7 +473,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "BMS.kicad_pro",
+    "filename": "BMU.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -640,8 +640,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "BMS.kicad_sch",
-        "name": "BMS",
+        "filename": "BMU.kicad_sch",
+        "name": "BMU",
         "uuid": "efb70416-ce55-4766-98ba-c3d23efcccb1"
       }
     ],
