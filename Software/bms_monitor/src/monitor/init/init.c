@@ -9,8 +9,11 @@
 #include <zephyr/devicetree.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/drivers/pinctrl.h>
+#include <zephyr/logging/log.h>
 #include <errno.h>
 #include <stdint.h>
+
+LOG_MODULE_REGISTER(init, LOG_LEVEL_INF);
 
 #define UART_NODE DT_NODELABEL(usart1)
 #define GPIO_NODE DT_PATH(zephyr_user)
@@ -40,34 +43,42 @@ int monitor_init(void)
 {
     int ret;
 
+    LOG_INF("starting monitor init");
+
     if (!gpio_is_ready_dt(&gpio))
     {
+        LOG_ERR("wake GPIO device not ready");
         return -ENODEV;
     }
 
     ret = gpio_pin_configure_dt(&gpio, GPIO_OUTPUT_HIGH);
     if (ret < 0)
     {
+        LOG_ERR("wake GPIO configure failed: %d", ret);
         return ret;
     }
 
     wake_bridge();
+    LOG_INF("bridge wake sequence complete");
 
     ret = pinctrl_apply_state(uart_pinctrl, PINCTRL_STATE_DEFAULT);
     if (ret < 0)
     {
+        LOG_ERR("UART pinctrl restore failed: %d", ret);
         return ret;
     }
 
     ret = uart_init();
     if (ret < 0)
     {
+        LOG_ERR("uart_init failed: %d", ret);
         return ret;
     }
 
     ret = wake_stack();
     if (ret < 0)
     {
+        LOG_ERR("stack wake command failed: %d", ret);
         return ret;
     }
 
@@ -76,9 +87,11 @@ int monitor_init(void)
     ret = auto_address();
     if (ret < 0)
     {
+        LOG_ERR("auto-address failed: %d", ret);
         return ret;
     }
 
+    LOG_INF("monitor init complete");
     return 0;
 }
 
@@ -115,8 +128,15 @@ static void wake_bridge(void)
 static int wake_stack(void)
 {
     uint8_t data = BQ79600_CONTROL1_SEND_WAKE;
+    int ret;
 
-    return write_reg(SINGLE_WRITE, BRIDGE_ADDR, BQ79600_REG_CONTROL1, &data, 1U);
+    ret = write_reg(SINGLE_WRITE, BRIDGE_ADDR, BQ79600_REG_CONTROL1, &data, 1U);
+    if (ret < 0)
+    {
+        LOG_ERR("SEND_WAKE write failed: reg=0x%04X err=%d", BQ79600_REG_CONTROL1, ret);
+    }
+
+    return ret;
 }
 
 static int auto_address(void)
@@ -131,6 +151,7 @@ static int auto_address(void)
         ret = write_reg(STACK_WRITE, 0U, reg, &data, 1U);
         if (ret < 0)
         {
+            LOG_ERR("dummy stack write failed: reg=0x%04X err=%d", reg, ret);
             return ret;
         }
 
@@ -141,6 +162,7 @@ static int auto_address(void)
     ret = write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_CONTROL1, &data, 1U);
     if (ret < 0)
     {
+        LOG_ERR("auto-address enable failed: reg=0x%04X err=%d", BQ79616_REG_CONTROL1, ret);
         return ret;
     }
     k_msleep(1);
@@ -151,6 +173,7 @@ static int auto_address(void)
         ret = write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_DIR0_ADDR, &data, 1U);
         if (ret < 0)
         {
+            LOG_ERR("DIR0_ADDR assignment failed: addr=0x%02X reg=0x%04X err=%d", addr, BQ79616_REG_DIR0_ADDR, ret);
             return ret;
         }
 
@@ -161,6 +184,7 @@ static int auto_address(void)
     ret = write_reg(BROADCAST_WRITE, 0U, BQ79616_REG_COMM_CTRL, &data, 1U);
     if (ret < 0)
     {
+        LOG_ERR("COMM_CTRL stack write failed: reg=0x%04X err=%d", BQ79616_REG_COMM_CTRL, ret);
         return ret;
     }
     k_msleep(1);
@@ -169,17 +193,17 @@ static int auto_address(void)
     ret = write_reg(SINGLE_WRITE, NUM_STACK_DEVICES, BQ79616_REG_COMM_CTRL, &data, 1U);
     if (ret < 0)
     {
+        LOG_ERR("COMM_CTRL top-stack write failed: dev=0x%02X reg=0x%04X err=%d", NUM_STACK_DEVICES, BQ79616_REG_COMM_CTRL, ret);
         return ret;
     }
     k_msleep(1);
 
-    for (uint16_t reg = BQ79616_REG_OTP_ECC_DATAIN1;
-         reg <= BQ79616_REG_OTP_ECC_DATAIN8;
-         reg++)
+    for (uint16_t reg = BQ79616_REG_OTP_ECC_DATAIN1; reg <= BQ79616_REG_OTP_ECC_DATAIN8; reg++)
     {
         ret = read_reg(STACK_READ, 0U, reg, rx_buf, sizeof(rx_buf), 1U);
         if (ret < 0)
         {
+            LOG_ERR("dummy stack read failed: reg=0x%04X err=%d", reg, ret);
             return ret;
         }
 

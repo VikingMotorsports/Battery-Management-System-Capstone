@@ -6,6 +6,9 @@
 #include <stdint.h>
 #include <errno.h>
 #include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
+
+LOG_MODULE_REGISTER(voltage, LOG_LEVEL_INF);
 
 #define STACK_ADDR_UNUSED 0U
 #define ACTIVE_CELL_6 0x00U
@@ -26,6 +29,7 @@ int voltage_init(void)
     ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_ACTIVE_CELL, &data, 1U);
     if (ret < 0)
     {
+        LOG_ERR("ACTIVE_CELL write failed: reg=0x%04X err=%d", BQ79616_REG_ACTIVE_CELL, ret);
         return ret;
     }
 
@@ -33,6 +37,7 @@ int voltage_init(void)
     ret = write_reg(STACK_WRITE, STACK_ADDR_UNUSED, BQ79616_REG_ADC_CTRL1, &data, 1U);
     if (ret < 0)
     {
+        LOG_ERR("ADC_CTRL1 write failed: reg=0x%04X err=%d", BQ79616_REG_ADC_CTRL1, ret);
         return ret;
     }
 
@@ -46,19 +51,16 @@ int read_cell_voltages(cell_voltage_data_t *voltages)
 
     if (voltages == NULL)
     {
+        LOG_ERR("read_cell_voltages got NULL output pointer");
         return -EINVAL;
     }
 
     k_usleep(500);
 
-    ret = read_reg(STACK_READ,
-                   STACK_ADDR_UNUSED,
-                   BQ79616_REG_VCELL16_HI,
-                   rx_buf,
-                   sizeof(rx_buf),
-                   VCELL_BLOCK_NUM_BYTES);
+    ret = read_reg(STACK_READ, STACK_ADDR_UNUSED, BQ79616_REG_VCELL16_HI, rx_buf, sizeof(rx_buf), VCELL_BLOCK_NUM_BYTES);
     if (ret < 0)
     {
+        LOG_ERR("VCELL block read failed: reg=0x%04X err=%d", BQ79616_REG_VCELL16_HI, ret);
         return ret;
     }
 
@@ -75,8 +77,7 @@ static void parse_cell_voltages(const uint8_t *rx_buf, cell_voltage_data_t *volt
         size_t payload_index = i * 2U;
         size_t cell_index = 15U - i;
 
-        int16_t raw = (int16_t)(((uint16_t)payload[payload_index] << 8) |
-                                (uint16_t)payload[payload_index + 1U]);
+        int16_t raw = (int16_t)(((uint16_t)payload[payload_index] << 8) | (uint16_t)payload[payload_index + 1U]);
 
         voltages->cells[cell_index].raw = raw;
 
@@ -88,8 +89,7 @@ static void parse_cell_voltages(const uint8_t *rx_buf, cell_voltage_data_t *volt
         else
         {
             voltages->cells[cell_index].active = true;
-            voltages->cells[cell_index].voltage =
-                ((float)raw * 190.73f) / 1000000.0f;
+            voltages->cells[cell_index].voltage = ((float)raw * 190.73f) / 1000000.0f;
         }
     }
 }
