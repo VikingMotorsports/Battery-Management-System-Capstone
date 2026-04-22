@@ -4,9 +4,12 @@
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>
 #include <zephyr/drivers/uart.h>
+#include <zephyr/logging/log.h>
 #include <errno.h>
 #include <stdbool.h>
 #include <string.h>
+
+LOG_MODULE_REGISTER(uart, LOG_LEVEL_INF);
 
 #define UART_NODE DT_NODELABEL(usart1)
 
@@ -65,6 +68,7 @@ int uart_init(void)
 {
     if (!device_is_ready(uart_dev))
     {
+        LOG_ERR("UART device not ready");
         return -ENODEV;
     }
 
@@ -79,12 +83,14 @@ int uart_init(void)
     int ret = uart_configure(uart_dev, &config);
     if (ret < 0)
     {
+        LOG_ERR("uart_configure failed: %d", ret);
         return ret;
     }
 
     ret = uart_callback_set(uart_dev, uart_callback, NULL);
     if (ret < 0)
     {
+        LOG_ERR("uart_callback_set failed: %d", ret);
         return ret;
     }
 
@@ -105,6 +111,7 @@ int uart_transaction(const uint8_t *tx_buf, size_t tx_len, uint8_t *rx_buf, size
         ret = uart_rx_enable(uart_dev, rx_buf, rx_len, RX_TIMEOUT_US);
         if (ret < 0)
         {
+            LOG_ERR("uart_rx_enable failed: %d", ret);
             return ret;
         }
 
@@ -119,6 +126,7 @@ int uart_transaction(const uint8_t *tx_buf, size_t tx_len, uint8_t *rx_buf, size
             (void)uart_rx_disable(uart_dev);
         }
 
+        LOG_ERR("uart_tx failed: %d", ret);
         return ret;
     }
 
@@ -129,6 +137,7 @@ int uart_transaction(const uint8_t *tx_buf, size_t tx_len, uint8_t *rx_buf, size
             (void)uart_rx_disable(uart_dev);
         }
 
+        LOG_ERR("UART TX timeout");
         return -ETIMEDOUT;
     }
 
@@ -141,6 +150,7 @@ int uart_transaction(const uint8_t *tx_buf, size_t tx_len, uint8_t *rx_buf, size
                 (void)uart_rx_disable(uart_dev);
             }
 
+            LOG_ERR("UART RX timeout");
             return -ETIMEDOUT;
         }
 
@@ -151,6 +161,7 @@ int uart_transaction(const uint8_t *tx_buf, size_t tx_len, uint8_t *rx_buf, size
 
         if (rx_count < expected_rx_len)
         {
+            LOG_ERR("UART RX frame too short: got=%u expected=%u", (unsigned int)rx_count, (unsigned int)expected_rx_len);
             return -EMSGSIZE;
         }
     }

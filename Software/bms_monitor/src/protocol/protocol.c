@@ -2,9 +2,12 @@
 #include "uart.h"
 
 #include <zephyr/sys/util.h>
+#include <zephyr/logging/log.h>
 #include <errno.h>
 #include <stdint.h>
 #include <stddef.h>
+
+LOG_MODULE_REGISTER(protocol, LOG_LEVEL_INF);
 
 #define SINGLE_READ_INIT 0x80U
 #define SINGLE_WRITE_INIT 0x90U
@@ -41,6 +44,7 @@ int read_reg(read_mode_t mode, uint8_t dev_addr, uint16_t reg_addr, uint8_t *rx_
         break;
 
     default:
+        LOG_ERR("invalid read mode: %d", mode);
         return -EINVAL;
     }
 
@@ -69,6 +73,7 @@ int write_reg(write_mode_t mode, uint8_t dev_addr, uint16_t reg_addr, const uint
         break;
 
     default:
+        LOG_ERR("invalid write mode: %d", mode);
         return -EINVAL;
     }
 
