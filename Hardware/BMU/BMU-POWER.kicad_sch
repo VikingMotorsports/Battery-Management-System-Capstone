@@ -2291,48 +2291,6 @@
 		)
 		(uuid "68c9e3bf-0fd0-4370-a686-4ed1c98cbf05")
 	)
-	(rectangle
-		(start 88.9 110.49)
-		(end 113.03 123.19)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "eda54322-03c8-4837-9e51-bf5666109d75")
-	)
-	(text "reverse battery protection"
-		(exclude_from_sim no)
-		(at 140.716 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "0b24709d-308d-4392-a749-9f4838fc5729")
-	)
-	(text "Transient Voltage Suppressor"
-		(exclude_from_sim no)
-		(at 140.462 127.508 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "2f56921d-5803-4fed-b63a-d3973b472b6f")
-	)
-	(text "Decoupling Capacitor"
-		(exclude_from_sim no)
-		(at 170.434 122.682 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5dc114aa-aefb-4aea-ad8f-800dce215b96")
-	)
 	(text "3.3V"
 		(exclude_from_sim no)
 		(at 287.02 115.57 0)
@@ -2353,16 +2311,6 @@
 		)
 		(uuid "67cc7717-9f24-4b05-bfbc-0595baa96c09")
 	)
-	(text "12V Input"
-		(exclude_from_sim no)
-		(at 100.33 116.84 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-			)
-		)
-		(uuid "885aa745-3712-4ad1-ba65-67c9559d11c0")
-	)
 	(text "5V"
 		(exclude_from_sim no)
 		(at 203.2 115.57 0)
@@ -2373,11 +2321,16 @@
 		)
 		(uuid "9072fc8f-e581-42d9-878f-bd5a5d8ca652")
 	)
-	(junction
-		(at 162.56 163.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "091e5941-a171-4f98-a9bb-672d7d2eddd5")
+	(text "12 V input protection stage:\nF1 provides input fault protection.\nQ2 implements high-side reverse-polarity protection.\nD1 clamps input transients on the vehicle 12 V rail.\nD2 limits PMOS gate-source voltage.\nR6 pulls the gate low for normal turn-on."
+		(exclude_from_sim no)
+		(at 117.094 179.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e6780e7a-e405-4c9f-8e48-a0ed3711152d")
 	)
 	(junction
 		(at 135.89 135.89)
@@ -2410,6 +2363,12 @@
 		(uuid "2a5885d6-0fd6-4219-a38d-041d36b4287a")
 	)
 	(junction
+		(at 137.16 163.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2c50eaf6-395c-457d-8954-a3d796a12585")
+	)
+	(junction
 		(at 226.06 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2438,12 +2397,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5de1b008-924d-4b98-8ce4-7469c3c5c53e")
-	)
-	(junction
-		(at 264.16 163.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "64ad7987-85b5-4572-b209-5622ca8abaea")
 	)
 	(junction
 		(at 162.56 135.89)
@@ -2488,12 +2441,6 @@
 		(uuid "c2c6ea92-c87a-455d-99b8-1f6596f6b0a6")
 	)
 	(junction
-		(at 148.59 163.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c40c1ec6-d655-45d3-ab75-e0ed90ee9420")
-	)
-	(junction
 		(at 278.13 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2534,12 +2481,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dbdd2949-826f-426c-be0e-c5c3c30d0ade")
-	)
-	(junction
-		(at 278.13 163.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eb87e681-6bab-4982-992c-b915e5fe24a8")
 	)
 	(wire
 		(pts
@@ -2883,16 +2824,6 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 163.83) (xy 278.13 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63572b5d-95d0-489d-bb6f-2bfa0d4366a2")
-	)
-	(wire
-		(pts
 			(xy 297.18 143.51) (xy 294.64 143.51)
 		)
 		(stroke
@@ -2960,6 +2891,16 @@
 			(type default)
 		)
 		(uuid "7421c2ee-5b79-4a98-a364-2c185f4cf6cd")
+	)
+	(wire
+		(pts
+			(xy 137.16 163.83) (xy 148.59 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bda82e3-1baa-4c3e-8f05-597935ad3eb6")
 	)
 	(wire
 		(pts
@@ -3113,16 +3054,6 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 163.83) (xy 162.56 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a528a601-88e3-405b-9666-292724ebf2d7")
-	)
-	(wire
-		(pts
 			(xy 264.16 132.08) (xy 278.13 132.08)
 		)
 		(stroke
@@ -3163,7 +3094,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 163.83) (xy 148.59 163.83)
+			(xy 125.73 163.83) (xy 137.16 163.83)
 		)
 		(stroke
 			(width 0)
@@ -4711,6 +4642,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 287.02 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "98629abc-31ec-4080-9f5c-bd24a241d6ac")
+		(property "Reference" "#PWR026"
+			(at 287.02 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 287.02 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 287.02 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 287.02 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 287.02 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "50a90368-1deb-4fc6-8c8f-bd958808c70d")
+		)
+		(instances
+			(project "BMU"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/72276164-1341-4c36-b4e6-9b9f0edc7f8e"
+					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 242.57 149.86 0)
 		(unit 1)
@@ -4867,6 +4876,84 @@
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/72276164-1341-4c36-b4e6-9b9f0edc7f8e"
 					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 137.16 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "beb53863-e3a8-4bd9-80e8-1e606c7b9967")
+		(property "Reference" "#PWR027"
+			(at 137.16 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 137.16 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 137.16 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b6c7ffee-5a02-486e-b994-3202d168ee06")
+		)
+		(instances
+			(project "BMU"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/72276164-1341-4c36-b4e6-9b9f0edc7f8e"
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)

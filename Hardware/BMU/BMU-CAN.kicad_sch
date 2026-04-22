@@ -321,6 +321,507 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "ESDCAN03-2BWY:ESDCAN03-2BWY"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "CR"
+				(at 20.32 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "ESDCAN03-2BWY"
+				(at 20.32 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "SOT323-3L_STM"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.st.com/resource/en/datasheet/esdcan03-2bwy.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "ESDCAN03-2BWY"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT323-3L_STM SOT323-3L_STM-M SOT323-3L_STM-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ESDCAN03-2BWY_0_1"
+				(polyline
+					(pts
+						(xy 7.62 2.54) (xy 7.62 -7.62)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 16.51 0)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -5.08) (xy 16.51 -5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -7.62) (xy 30.48 -7.62)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 16.51 1.27) (xy 19.05 0)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 16.51 -1.27) (xy 16.51 1.27)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 16.51 -3.81) (xy 19.05 -5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 16.51 -6.35) (xy 16.51 -3.81)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 19.05 1.27) (xy 18.796 1.524)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 19.05 1.27) (xy 19.05 -1.27)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 19.05 0) (xy 16.51 -1.27)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 19.05 0) (xy 21.59 1.27)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 19.05 -1.27) (xy 19.304 -1.524)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 19.05 -3.81) (xy 18.796 -3.556)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 19.05 -3.81) (xy 19.05 -6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 19.05 -5.08) (xy 16.51 -6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 19.05 -5.08) (xy 21.59 -3.81)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 19.05 -6.35) (xy 19.304 -6.604)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 21.59 1.27) (xy 21.59 -1.27)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 21.59 0) (xy 25.4 0)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 21.59 -1.27) (xy 19.05 0)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 21.59 -3.81) (xy 21.59 -6.35)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 21.59 -5.08) (xy 25.4 -5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 21.59 -6.35) (xy 19.05 -5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 25.4 -2.54) (xy 30.48 -2.54)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 25.4 -2.54)
+					(radius 0.127)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 25.4 -5.08) (xy 25.4 0)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 30.48 2.54) (xy 7.62 2.54)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 30.48 -7.62) (xy 30.48 2.54)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 0)
+					(length 7.62)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -5.08 0)
+					(length 7.62)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 38.1 -2.54 180)
+					(length 7.62)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "MCP2562FDT-H_SN:MCP2562FDT-H_SN"
 			(pin_names
 				(offset 1.016)
@@ -1034,9 +1535,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "MCU output; HIGH = CAN standby, LOW = normal mode"
+	(text "CAN_STBY: MCU output; \nHIGH = CAN standby, LOW = normal mode"
 		(exclude_from_sim no)
-		(at 119.888 97.028 0)
+		(at 128.016 120.65 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1065,10 +1566,10 @@
 		(uuid "7c0bb6d6-4546-4212-9d22-ea348143bd80")
 	)
 	(junction
-		(at 196.85 116.84)
+		(at 196.85 121.92)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1c6710e5-aca7-4f6e-9f6f-9e974c1de83c")
+		(uuid "37866bbf-ef2f-42af-9828-acd2a57ae792")
 	)
 	(junction
 		(at 187.96 97.79)
@@ -1077,22 +1578,34 @@
 		(uuid "50204dd0-6369-46a0-9d04-2ba4b16c9185")
 	)
 	(junction
+		(at 207.01 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5ee5bdcb-a240-4265-a0c0-d3138070c32e")
+	)
+	(junction
 		(at 180.34 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "653ba023-094c-4e6f-946f-f8ea65faf0a6")
 	)
 	(junction
+		(at 196.85 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "723512ae-f9fb-4c96-9459-ce771f6bbab7")
+	)
+	(junction
+		(at 209.55 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "78bd3b05-e378-4b46-b370-8c94fc9c5bb3")
+	)
+	(junction
 		(at 173.99 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dd34fc6b-f140-4f51-bb27-804198e74010")
-	)
-	(junction
-		(at 196.85 121.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e1c5278f-9d08-40ce-8374-4cb358578d41")
 	)
 	(junction
 		(at 162.56 116.84)
@@ -1202,7 +1715,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 121.92) (xy 196.85 121.92)
+			(xy 245.11 121.92) (xy 209.55 121.92)
 		)
 		(stroke
 			(width 0)
@@ -1242,6 +1755,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 121.92) (xy 209.55 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "911cb33a-89dc-4c51-9400-c1ff7034c43d")
+	)
+	(wire
+		(pts
 			(xy 154.94 116.84) (xy 162.56 116.84)
 		)
 		(stroke
@@ -1259,6 +1782,16 @@
 			(type default)
 		)
 		(uuid "a9249f56-c2a0-4a21-8b38-86c159f57007")
+	)
+	(wire
+		(pts
+			(xy 209.55 138.43) (xy 207.01 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afd4f8a6-3be7-4c70-8292-ef7621f38c53")
 	)
 	(wire
 		(pts
@@ -1292,13 +1825,23 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 116.84) (xy 196.85 116.84)
+			(xy 245.11 116.84) (xy 207.01 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c982f39e-d9d6-4c9d-8a75-855922356a57")
+	)
+	(wire
+		(pts
+			(xy 207.01 116.84) (xy 207.01 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cddd8a0a-e7d5-4371-8b90-31a51681d307")
 	)
 	(wire
 		(pts
@@ -1309,6 +1852,16 @@
 			(type default)
 		)
 		(uuid "d910523f-02a9-4438-bb41-cd6f5e237bb0")
+	)
+	(wire
+		(pts
+			(xy 196.85 116.84) (xy 207.01 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee53e4cd-a339-4200-af15-ab251c43feda")
 	)
 	(wire
 		(pts
@@ -1350,6 +1903,16 @@
 		)
 		(uuid "f8c0e071-9a19-41f8-8650-874926b122ce")
 	)
+	(wire
+		(pts
+			(xy 196.85 121.92) (xy 209.55 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbac990f-9ccb-4eab-8d6f-320319c79a66")
+	)
 	(hierarchical_label "CAN_TX"
 		(shape bidirectional)
 		(at 154.94 111.76 180)
@@ -1374,7 +1937,7 @@
 	)
 	(hierarchical_label "CANL"
 		(shape bidirectional)
-		(at 226.06 116.84 0)
+		(at 245.11 116.84 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1385,7 +1948,7 @@
 	)
 	(hierarchical_label "CANH"
 		(shape bidirectional)
-		(at 226.06 121.92 0)
+		(at 245.11 121.92 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1932,6 +2495,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 247.65 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "563802d2-cfc3-43bf-bfd9-d18f3cebd995")
+		(property "Reference" "#PWR028"
+			(at 247.65 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 247.65 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 247.65 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6ae61de6-b399-4f7c-a4e1-20e94e689c5d")
+		)
+		(instances
+			(project "BMU"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 187.96 93.98 0)
 		(unit 1)
@@ -2004,6 +2645,91 @@
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ESDCAN03-2BWY:ESDCAN03-2BWY")
+		(at 209.55 133.35 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "889b3069-6d47-4684-9545-c1f179c869e4")
+		(property "Reference" "CR1"
+			(at 228.6 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "ESDCAN03-2BWY"
+			(at 228.6 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "SOT323-3L_STM"
+			(at 209.55 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/esdcan03-2bwy.pdf"
+			(at 209.55 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 209.55 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "c992cd0b-89b0-4dcd-aa1c-6feb9ba24db0")
+		)
+		(pin "1"
+			(uuid "72337137-595f-48c8-b776-8fd046c55d65")
+		)
+		(pin "2"
+			(uuid "81730113-f941-498b-a53b-57fb61c4b303")
+		)
+		(instances
+			(project "BMU"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/ebb995bd-0019-4c04-a0dd-2962c6aaae17"
+					(reference "CR1")
 					(unit 1)
 				)
 			)
