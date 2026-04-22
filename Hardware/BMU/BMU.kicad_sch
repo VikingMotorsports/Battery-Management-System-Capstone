@@ -1379,7 +1379,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x03"
+		(property "Value" "SHUNT"
 			(at 228.6 168.9099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1390,7 +1390,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 226.06 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -1463,7 +1463,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x04"
+		(property "Value" "COM"
 			(at 106.68 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1473,7 +1473,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 106.68 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -1550,7 +1550,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x03"
+		(property "Value" "CAN"
 			(at 262.89 137.1599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1561,7 +1561,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 260.35 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -1635,7 +1635,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x02"
+		(property "Value" "IN/GND"
 			(at 142.494 109.474 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1646,7 +1646,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 144.78 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -1717,7 +1717,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x02"
+		(property "Value" "I2C"
 			(at 228.346 155.956 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1728,7 +1728,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 226.06 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -1855,8 +1855,8 @@
 		)
 	)
 	(sheet
-		(at 166.37 106.68)
-		(size 27.94 10.16)
+		(at 166.37 105.41)
+		(size 27.94 11.43)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1871,7 +1871,7 @@
 		)
 		(uuid "72276164-1341-4c36-b4e6-9b9f0edc7f8e")
 		(property "Sheetname" "BMU-POWER"
-			(at 166.37 105.9684 0)
+			(at 166.37 104.6984 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

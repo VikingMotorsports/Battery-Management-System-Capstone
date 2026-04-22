@@ -3019,7 +3019,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 184.15 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -3335,7 +3335,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical"
 			(at 168.91 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -3517,7 +3517,7 @@
 				)
 			)
 		)
-		(property "Footprint" "QFP50P1200X1200X160-64N"
+		(property "Footprint" "STM32C092RCT6:QFP50P1200X1200X160-64N"
 			(at 265.43 197.79 0)
 			(hide yes)
 			(show_name no)
@@ -4026,7 +4026,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 219.71 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4186,7 +4186,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 184.15 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -4267,7 +4267,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 229.87 87.63 0)
 			(hide yes)
 			(show_name no)
