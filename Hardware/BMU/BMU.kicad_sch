@@ -852,8 +852,32 @@
 		(uuid "8ef1582e-ea42-4e13-88d5-717555b33f03")
 	)
 	(rectangle
-		(start 95.25 120.65)
-		(end 121.92 143.51)
+		(start 132.08 142.24)
+		(end 148.59 154.94)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "de10f3b1-ca52-4b59-9f55-6d4069c5e632")
+	)
+	(rectangle
+		(start 98.044 142.24)
+		(end 115.57 154.686)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "f91aac66-c1c5-4803-92bf-04d31c10723a")
+	)
+	(rectangle
+		(start 86.36 130.556)
+		(end 124.46 156.464)
 		(stroke
 			(width 0)
 			(type default)
@@ -863,9 +887,9 @@
 		)
 		(uuid "faca9fee-ed9d-463e-a66d-b13c0a8985f3")
 	)
-	(text "3. BMU-BQ79600\n\nCore function:\nInterfaces the MCU with the external battery-monitor daisy-chain network.\n\nShort version for page 1:\nBQ79600 host interface\nConnects STM32 to external battery monitor chain\nHandles daisy-chain communication"
+	(text "2. BMU-BQ79600\n\nCore function:\nImplements the isolated BQ79600 host bridge \nbetween the MCU and the external battery-monitor daisy-chain / ring network.\n\nShort version for page 1:\nIsolated BQ79600 host bridge interface\nConnects STM32 to external battery monitor chain\nHandles daisy-chain / ring communication"
 		(exclude_from_sim no)
-		(at 294.132 111.76 0)
+		(at 292.354 80.264 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -874,9 +898,19 @@
 		)
 		(uuid "3a0563fb-172d-4a3b-ac5d-65c9da6353b1")
 	)
+	(text "ISO\n"
+		(exclude_from_sim no)
+		(at 102.87 145.542 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "5cfabb35-4736-4835-96b7-f8b03fa5dea7")
+	)
 	(text "4. BMU-CAN\n\nCore function:\nProvides the physical CAN-FD bus interface between the BMU and vehicle ECU.\n\nShort version for page 1:\nCAN-FD transceiver interface\nConverts MCU signals to CAN bus levels\nConnects BMU to ECU / vehicle network"
 		(exclude_from_sim no)
-		(at 293.624 145.542 0)
+		(at 291.846 148.082 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -885,9 +919,9 @@
 		)
 		(uuid "8c6e16ed-add1-41a2-b5c2-5c1af0afece8")
 	)
-	(text "2. BMU-MCU\n\nCore function:\nMain STM32 controller for BMU logic, diagnostics, and communications.\n\nShort version for page 1:\nMain STM32 control page\nExecutes BMU control and monitoring logic\nInterfaces with BQ, CAN, and external shunt board"
+	(text "3. BMU-MCU\n\nCore function:\nMain STM32 controller for BMU logic, diagnostics, and communications.\n\nShort version for page 1:\nMain STM32 control page\nExecutes BMU control and monitoring logic\nInterfaces with BQ, CAN, and external shunt board"
 		(exclude_from_sim no)
-		(at 294.386 77.724 0)
+		(at 292.1 114.808 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -908,7 +942,7 @@
 	)
 	(text "1. BMU-POWER\n\nCore function:\nConditions the 12 V input and generates the regulated 5 V and 3.3 V rails.\n\nShort version for page 1:\n12 V input conditioning and protection\nGenerates 5 V and 3.3 V rails\nSupplies power to BMU circuits"
 		(exclude_from_sim no)
-		(at 294.64 43.688 0)
+		(at 292.862 46.228 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -927,19 +961,29 @@
 		)
 		(uuid "e48130a6-b692-4aba-b776-4c5e8e817183")
 	)
-	(text "BQ79616\n"
+	(text "ISO\n"
 		(exclude_from_sim no)
-		(at 99.822 122.428 0)
+		(at 144.018 151.384 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "f6e14477-e938-4d29-8470-59b1ca937b37")
+	)
+	(text "BQ79616\n"
+		(exclude_from_sim no)
+		(at 96.012 134.112 0)
+		(effects
+			(font
+				(size 2.54 2.54)
 			)
 		)
 		(uuid "fab5aac8-6b7f-4d6a-82b6-5e3ce635403b")
 	)
 	(text "Optional module, if you keep it later\n5. BMU-SAFETY\n\nCore function:\nRoutes BMU fault and status signals to external shutdown or safety circuits.\n\nShort version for page 1:\nSafety / shutdown interface\nRoutes fault and status signals\nOptional external safety path"
 		(exclude_from_sim no)
-		(at 293.116 183.388 0)
+		(at 291.338 185.928 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -947,6 +991,26 @@
 			(justify left)
 		)
 		(uuid "fc614365-f0e9-419a-87c9-94d467b865a2")
+	)
+	(wire
+		(pts
+			(xy 115.57 144.78) (xy 130.81 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07bacb5a-8cae-46fc-a772-28217f03f7d0")
+	)
+	(wire
+		(pts
+			(xy 115.57 149.86) (xy 130.81 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1312415d-1088-4978-b921-e9f7cb86a6d6")
 	)
 	(wire
 		(pts
@@ -960,16 +1024,6 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 135.89) (xy 128.27 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "284c71fb-9f15-4516-9275-e1968add1eef")
-	)
-	(wire
-		(pts
 			(xy 199.39 127) (xy 212.09 127)
 		)
 		(stroke
@@ -977,16 +1031,6 @@
 			(type default)
 		)
 		(uuid "2d8cb1f5-af3b-4a82-a88d-03076016c9e6")
-	)
-	(wire
-		(pts
-			(xy 111.76 138.43) (xy 128.27 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f041622-9eb6-47e3-a486-9d5f8a152e73")
 	)
 	(wire
 		(pts
@@ -1010,7 +1054,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 144.78) (xy 170.18 144.78)
+			(xy 163.83 153.67) (xy 170.18 153.67)
 		)
 		(stroke
 			(width 0)
@@ -1037,16 +1081,6 @@
 			(type default)
 		)
 		(uuid "4fd73847-1fa1-49a4-8796-467651cf5199")
-	)
-	(wire
-		(pts
-			(xy 111.76 140.97) (xy 128.27 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f07c2ba-fb82-458f-8cf7-2c945a4fef75")
 	)
 	(wire
 		(pts
@@ -1100,13 +1134,23 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 142.24) (xy 170.18 142.24)
+			(xy 163.83 151.13) (xy 170.18 151.13)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "960c464f-e51f-4d5f-899d-17b40fb963fa")
+	)
+	(wire
+		(pts
+			(xy 115.57 152.4) (xy 130.81 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a218e4b9-65bc-4ea0-9eb7-7275d5c1af44")
 	)
 	(wire
 		(pts
@@ -1150,23 +1194,23 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 153.67) (xy 170.18 153.67)
+			(xy 115.57 147.32) (xy 130.81 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea90d28b-db84-438e-baac-c85a36a948f4")
+	)
+	(wire
+		(pts
+			(xy 163.83 162.56) (xy 170.18 162.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f4bd80b2-939e-44e5-a260-b0239fb0404a")
-	)
-	(wire
-		(pts
-			(xy 111.76 133.35) (xy 128.27 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fbeb54b4-254b-48e2-b5e6-3cba657b14ad")
 	)
 	(label "J4_GND"
 		(at 247.65 138.43 0)
@@ -1178,6 +1222,16 @@
 		)
 		(uuid "0fa61ca8-6aaf-4226-946c-e3db0f9a09d0")
 	)
+	(label "COMHP"
+		(at 123.19 144.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "12aa3dea-6d1a-4426-98fb-25916a19a695")
+	)
 	(label "J1_12V"
 		(at 151.13 106.68 0)
 		(effects
@@ -1188,16 +1242,6 @@
 		)
 		(uuid "147f6872-ff81-4f9f-a933-dafdddf31dc3")
 	)
-	(label "J2_COMHP"
-		(at 120.65 133.35 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "29255337-9e5e-42cb-b72d-2283e8179d27")
-	)
 	(label "SCL_STM32"
 		(at 210.82 156.21 0)
 		(effects
@@ -1207,16 +1251,6 @@
 			(justify left bottom)
 		)
 		(uuid "2f2ba294-f7a4-4138-8496-5227bc1c9ed0")
-	)
-	(label "J2_COMHN"
-		(at 120.65 135.89 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5b450385-0b5d-470e-b968-d25c7d14855b")
 	)
 	(label "J1_GND"
 		(at 151.13 109.22 0)
@@ -1238,25 +1272,15 @@
 		)
 		(uuid "8c446718-cafe-495a-a3b4-52caa61696da")
 	)
-	(label "J2_COMLN"
-		(at 120.65 140.97 180)
+	(label "COMLP"
+		(at 123.19 149.86 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "8e0d18ed-7f7f-44df-a6a5-e5fd3ddd4ead")
-	)
-	(label "J2_COMLP"
-		(at 120.65 138.43 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a815959e-edd1-41cb-b902-765ff261208a")
+		(uuid "9a909d41-b5ad-42a3-8813-871b70cca7ba")
 	)
 	(label "J4_CANH"
 		(at 247.65 133.35 0)
@@ -1268,6 +1292,16 @@
 		)
 		(uuid "b4804749-b30c-4a40-b32e-3f2db693e533")
 	)
+	(label "COMHN"
+		(at 123.19 147.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cb40945c-a075-4e4c-83e2-312720350a1b")
+	)
 	(label "J4_CANL"
 		(at 247.65 135.89 0)
 		(effects
@@ -1277,6 +1311,16 @@
 			(justify left bottom)
 		)
 		(uuid "e114dcbf-c049-4fad-a8e1-6ac84f071a23")
+	)
+	(label "COMLN"
+		(at 123.19 152.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "fd1b3769-4b6c-43cb-abdf-c6e29ecd3a35")
 	)
 	(symbol
 		(lib_id "power:+12V")
@@ -1436,92 +1480,6 @@
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "J5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 106.68 138.43 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "67b0d8cb-c105-4012-ba48-c6f06ab4655c")
-		(property "Reference" "J2"
-			(at 106.68 127 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "COM"
-			(at 106.68 129.54 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 106.68 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 106.68 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 106.68 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "4"
-			(uuid "bb812150-e8e8-4ee0-aeb8-3850fcd5aca6")
-		)
-		(pin "2"
-			(uuid "4d78c09f-2a6f-4c40-b9d0-3c9aff60a931")
-		)
-		(pin "1"
-			(uuid "c72ab203-28e3-42e8-b130-49a06ba19d92")
-		)
-		(pin "3"
-			(uuid "938ebee5-d135-45ab-9f06-15c7a18c6fce")
-		)
-		(instances
-			(project "BMU"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
-					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -1689,6 +1647,92 @@
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 110.49 149.86 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9d05c61c-9671-40b4-90d8-0b77edf4bd60")
+		(property "Reference" "J2"
+			(at 110.49 138.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "COM"
+			(at 110.49 140.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 110.49 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 110.49 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "b749c6a5-8bb4-4a54-b2d0-ab376df2a520")
+		)
+		(pin "2"
+			(uuid "20fc16e6-15bd-4d47-89a5-d346bd3874a0")
+		)
+		(pin "1"
+			(uuid "e7a5ef15-e541-423f-8c92-6bb0257a436b")
+		)
+		(pin "3"
+			(uuid "ea1d68a7-ee1e-4378-aca7-9756bf588023")
+		)
+		(instances
+			(project "BMU"
+				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -1901,8 +1945,8 @@
 		)
 	)
 	(sheet
-		(at 128.27 130.81)
-		(size 30.48 26.67)
+		(at 130.81 139.7)
+		(size 33.02 26.67)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1917,7 +1961,7 @@
 		)
 		(uuid "e6a80062-bf71-493b-b7d1-d8d35ceb29fd")
 		(property "Sheetname" "BMU-BQ79600"
-			(at 128.27 130.0984 0)
+			(at 130.81 138.9884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1928,7 +1972,7 @@
 			)
 		)
 		(property "Sheetfile" "BMU-BQ79600.kicad_sch"
-			(at 128.27 158.0646 0)
+			(at 130.81 166.9546 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1939,7 +1983,7 @@
 			)
 		)
 		(pin "COMHN" bidirectional
-			(at 128.27 135.89 180)
+			(at 130.81 147.32 180)
 			(uuid "a23374e8-e159-4182-9748-05a5233e19e3")
 			(effects
 				(font
@@ -1949,7 +1993,7 @@
 			)
 		)
 		(pin "COMHP" bidirectional
-			(at 128.27 133.35 180)
+			(at 130.81 144.78 180)
 			(uuid "8a8f9482-1068-4094-bdd3-154116494f0a")
 			(effects
 				(font
@@ -1959,7 +2003,7 @@
 			)
 		)
 		(pin "COMLN" bidirectional
-			(at 128.27 140.97 180)
+			(at 130.81 152.4 180)
 			(uuid "8ec8e386-e48d-4552-98c5-27be63538359")
 			(effects
 				(font
@@ -1969,7 +2013,7 @@
 			)
 		)
 		(pin "COMLP" bidirectional
-			(at 128.27 138.43 180)
+			(at 130.81 149.86 180)
 			(uuid "883fc136-a654-443c-95dd-32eeb6d0a0ae")
 			(effects
 				(font
@@ -1979,7 +2023,7 @@
 			)
 		)
 		(pin "MISO{slash}TX" output
-			(at 158.75 144.78 0)
+			(at 163.83 153.67 0)
 			(uuid "76a9a422-58ec-49fd-99f6-658fe6543b4d")
 			(effects
 				(font
@@ -1989,7 +2033,7 @@
 			)
 		)
 		(pin "MOSI{slash}RX" input
-			(at 158.75 142.24 0)
+			(at 163.83 151.13 0)
 			(uuid "00af6a5b-4e13-4093-9f54-70a531e75b67")
 			(effects
 				(font
@@ -1999,7 +2043,7 @@
 			)
 		)
 		(pin "FAULT_N" output
-			(at 158.75 153.67 0)
+			(at 163.83 162.56 0)
 			(uuid "405dd339-db53-4c97-8cc2-d581e010523c")
 			(effects
 				(font
@@ -2211,7 +2255,7 @@
 			)
 		)
 		(pin "UART_RX" input
-			(at 170.18 144.78 180)
+			(at 170.18 153.67 180)
 			(uuid "bdc3d7bc-2929-4a33-83bf-478b64bae3c1")
 			(effects
 				(font
@@ -2221,7 +2265,7 @@
 			)
 		)
 		(pin "UART_TX" output
-			(at 170.18 142.24 180)
+			(at 170.18 151.13 180)
 			(uuid "dd3ea8ac-f773-4e11-ade3-94170c1a65bf")
 			(effects
 				(font
@@ -2261,7 +2305,7 @@
 			)
 		)
 		(pin "BQ_FAULT_N" input
-			(at 170.18 153.67 180)
+			(at 170.18 162.56 180)
 			(uuid "d9ec7d72-42bd-4e04-b978-7ea4f83c92d0")
 			(effects
 				(font
