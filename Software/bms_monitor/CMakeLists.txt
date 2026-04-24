@@ -9,6 +9,7 @@ target_sources(app PRIVATE
     src/protocol/protocol.c
     src/monitor/init/init.c
     src/monitor/voltage/voltage.c
+    src/monitor/temperature/temperature.c
 )
 
 target_include_directories(app PRIVATE
@@ -18,4 +19,5 @@ target_include_directories(app PRIVATE
     src/monitor/init
     src/monitor/register_maps
     src/monitor/voltage
+    src/monitor/temperature
 )
