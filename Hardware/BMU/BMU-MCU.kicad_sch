@@ -4004,7 +4004,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ca35cbe3-b4a3-4480-9aa0-c936399ff542")
-		(property "Reference" "C16"
+		(property "Reference" "C14"
 			(at 215.138 85.852 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4068,7 +4068,7 @@
 		(instances
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/f115f1df-fd74-4b87-bcb3-90c9dd231c01"
-					(reference "C16")
+					(reference "C14")
 					(unit 1)
 				)
 			)

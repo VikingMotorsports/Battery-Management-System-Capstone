@@ -865,7 +865,7 @@
 	)
 	(rectangle
 		(start 98.044 142.24)
-		(end 115.57 154.686)
+		(end 107.95 153.67)
 		(stroke
 			(width 0)
 			(type default)
@@ -1960,7 +1960,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "e6a80062-bf71-493b-b7d1-d8d35ceb29fd")
-		(property "Sheetname" "BMU-BQ79600"
+		(property "Sheetname" "BMU-COM Bridge"
 			(at 130.81 138.9884 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1971,7 +1971,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "BMU-BQ79600.kicad_sch"
+		(property "Sheetfile" "BMU-COM Bridge.kicad_sch"
 			(at 130.81 166.9546 0)
 			(show_name no)
 			(do_not_autoplace no)

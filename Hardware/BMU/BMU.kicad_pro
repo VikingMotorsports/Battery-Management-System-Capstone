@@ -658,7 +658,7 @@
         "uuid": "efb70416-ce55-4766-98ba-c3d23efcccb1"
       }
     ],
-    "used_designators": "J7-8",
+    "used_designators": "R17,J7-8",
     "variants": []
   },
   "sheets": [
@@ -672,7 +672,7 @@
     ],
     [
       "e6a80062-bf71-493b-b7d1-d8d35ceb29fd",
-      "BMU-BQ79600"
+      "BMU-COM Bridge"
     ],
     [
       "f115f1df-fd74-4b87-bcb3-90c9dd231c01",
