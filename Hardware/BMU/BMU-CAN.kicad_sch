@@ -1557,7 +1557,7 @@
 	)
 	(text "CAN transceiver page: converts STM32 logic-level CAN signals to CANH/CANL bus signals"
 		(exclude_from_sim no)
-		(at 200.66 100.33 0)
+		(at 211.582 99.06 0)
 		(effects
 			(font
 				(size 2.54 2.54)

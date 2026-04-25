@@ -167,194 +167,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:D"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Device" "D"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "D_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:D_Zener"
 			(pin_numbers
 				(hide yes)
@@ -2363,12 +2175,6 @@
 		(uuid "2a5885d6-0fd6-4219-a38d-041d36b4287a")
 	)
 	(junction
-		(at 137.16 163.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2c50eaf6-395c-457d-8954-a3d796a12585")
-	)
-	(junction
 		(at 226.06 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2457,12 +2263,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ce3659fe-aba3-4702-ad4e-5ade1cf5d113")
-	)
-	(junction
-		(at 125.73 135.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d511fab6-f236-4297-bcfb-fb4ed3233843")
 	)
 	(junction
 		(at 278.13 143.51)
@@ -2594,16 +2394,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 135.89) (xy 135.89 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "186ef731-31f4-47b2-b264-82dd150cb4ad")
-	)
-	(wire
-		(pts
 			(xy 114.3 134.62) (xy 114.3 135.89)
 		)
 		(stroke
@@ -2654,7 +2444,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 135.89) (xy 125.73 135.89)
+			(xy 124.46 135.89) (xy 135.89 135.89)
 		)
 		(stroke
 			(width 0)
@@ -2894,16 +2684,6 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 163.83) (xy 148.59 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7bda82e3-1baa-4c3e-8f05-597935ad3eb6")
-	)
-	(wire
-		(pts
 			(xy 214.63 135.89) (xy 218.44 135.89)
 		)
 		(stroke
@@ -2941,16 +2721,6 @@
 			(type default)
 		)
 		(uuid "830fac55-8619-426f-a1de-921db2632a32")
-	)
-	(wire
-		(pts
-			(xy 125.73 161.29) (xy 125.73 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83aaae08-61e2-4d30-8e88-ebf783996c66")
 	)
 	(wire
 		(pts
@@ -3094,16 +2864,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 163.83) (xy 137.16 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b570714c-4e98-4a68-80b7-970e9176aa82")
-	)
-	(wire
-		(pts
 			(xy 264.16 139.7) (xy 264.16 142.24)
 		)
 		(stroke
@@ -3141,16 +2901,6 @@
 			(type default)
 		)
 		(uuid "bec90e3e-476d-49c0-85be-e920e95d3960")
-	)
-	(wire
-		(pts
-			(xy 125.73 135.89) (xy 125.73 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c3ef0fbe-e31d-4f96-8651-c43f68110d15")
 	)
 	(wire
 		(pts
@@ -4883,7 +4633,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 137.16 163.83 0)
+		(at 148.59 163.83 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4894,7 +4644,7 @@
 		(fields_autoplaced yes)
 		(uuid "beb53863-e3a8-4bd9-80e8-1e606c7b9967")
 		(property "Reference" "#PWR027"
-			(at 137.16 170.18 0)
+			(at 148.59 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4905,7 +4655,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 137.16 168.91 0)
+			(at 148.59 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4915,7 +4665,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 137.16 163.83 0)
+			(at 148.59 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4926,7 +4676,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 137.16 163.83 0)
+			(at 148.59 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4937,7 +4687,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 137.16 163.83 0)
+			(at 148.59 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5301,110 +5051,6 @@
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/72276164-1341-4c36-b4e6-9b9f0edc7f8e"
 					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 125.73 157.48 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f3721dfc-95f8-442b-ad6c-59703f7c60cf")
-		(property "Reference" "D1"
-			(at 128.27 156.2099 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SMBJ16A"
-			(at 128.27 158.7499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMB"
-			(at 125.73 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 125.73 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Diode"
-			(at 125.73 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 125.73 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 125.73 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "731e9a71-a60c-43f4-8b3a-b25b850bf203")
-		)
-		(pin "2"
-			(uuid "9415d1ac-5bf2-4683-a451-28fc5fd97b7e")
-		)
-		(instances
-			(project "BMU"
-				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/72276164-1341-4c36-b4e6-9b9f0edc7f8e"
-					(reference "D1")
 					(unit 1)
 				)
 			)
