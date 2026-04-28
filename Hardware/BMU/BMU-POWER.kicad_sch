@@ -2080,8 +2080,8 @@
 		(uuid "0067981e-c743-436e-a13c-97ad242827cb")
 	)
 	(rectangle
-		(start 190.5 109.22)
-		(end 214.63 121.92)
+		(start 191.77 109.22)
+		(end 215.9 121.92)
 		(stroke
 			(width 0)
 			(type default)
@@ -2125,7 +2125,7 @@
 	)
 	(text "5V"
 		(exclude_from_sim no)
-		(at 203.2 115.57 0)
+		(at 204.47 115.57 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -2133,9 +2133,9 @@
 		)
 		(uuid "9072fc8f-e581-42d9-878f-bd5a5d8ca652")
 	)
-	(text "12 V input protection stage:\nF1 provides input fault protection.\nQ2 implements high-side reverse-polarity protection.\nD1 clamps input transients on the vehicle 12 V rail.\nD2 limits PMOS gate-source voltage.\nR6 pulls the gate low for normal turn-on."
+	(text "12 V input protection stage:\nF1 provides input fault protection.\nQ2 implements high-side reverse-polarity protection.\nD2 limits PMOS gate-source voltage.\nR6 pulls the gate low for normal turn-on."
 		(exclude_from_sim no)
-		(at 117.094 179.07 0)
+		(at 115.062 174.244 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2143,12 +2143,6 @@
 			(justify left)
 		)
 		(uuid "e6780e7a-e405-4c9f-8e48-a0ed3711152d")
-	)
-	(junction
-		(at 135.89 135.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "151657af-4f6f-4101-a7ee-8e09324a612c")
 	)
 	(junction
 		(at 287.02 163.83)
@@ -2235,10 +2229,10 @@
 		(uuid "b78af8d7-2288-46de-9425-0f38bd68d69b")
 	)
 	(junction
-		(at 148.59 147.32)
+		(at 148.59 148.59)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b7c070d2-c782-47c2-ba13-6f736c7527bc")
+		(uuid "baa91cb8-9140-48c2-9b3f-a126c477b714")
 	)
 	(junction
 		(at 181.61 149.86)
@@ -2269,6 +2263,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d927d4ca-89ae-4b64-b25c-e90dc364fba2")
+	)
+	(junction
+		(at 135.89 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dac1e7ba-8c02-428a-bc58-436dd6a3ba43")
 	)
 	(junction
 		(at 264.16 139.7)
@@ -2334,7 +2334,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 147.32) (xy 148.59 147.32)
+			(xy 143.51 148.59) (xy 148.59 148.59)
 		)
 		(stroke
 			(width 0)
@@ -2381,6 +2381,16 @@
 			(type default)
 		)
 		(uuid "13155200-095f-425a-9513-e3dacb6af02b")
+	)
+	(wire
+		(pts
+			(xy 148.59 148.59) (xy 148.59 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "143b0dbf-bff5-4b86-8be4-b5ea24e082f7")
 	)
 	(wire
 		(pts
@@ -2494,7 +2504,17 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 144.78) (xy 148.59 147.32)
+			(xy 154.94 135.89) (xy 154.94 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e28d07c-2716-4906-a49c-2c92daa0551a")
+	)
+	(wire
+		(pts
+			(xy 148.59 143.51) (xy 148.59 148.59)
 		)
 		(stroke
 			(width 0)
@@ -2694,16 +2714,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 135.89) (xy 154.94 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7dc7e53e-5d80-481b-9cea-e41a3ad18b17")
-	)
-	(wire
-		(pts
 			(xy 264.16 147.32) (xy 264.16 151.13)
 		)
 		(stroke
@@ -2754,16 +2764,6 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 135.89) (xy 148.59 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b8df38b-3c38-47d9-9ae1-cc0bc64f7fb2")
-	)
-	(wire
-		(pts
 			(xy 181.61 135.89) (xy 171.45 135.89)
 		)
 		(stroke
@@ -2774,7 +2774,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 135.89) (xy 135.89 142.24)
+			(xy 135.89 135.89) (xy 135.89 143.51)
 		)
 		(stroke
 			(width 0)
@@ -2784,7 +2784,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 152.4) (xy 154.94 152.4)
+			(xy 135.89 153.67) (xy 154.94 153.67)
 		)
 		(stroke
 			(width 0)
@@ -2971,16 +2971,6 @@
 			(type default)
 		)
 		(uuid "de45cd0a-7b0e-4523-81fb-d6888d1eea47")
-	)
-	(wire
-		(pts
-			(xy 148.59 147.32) (xy 148.59 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e78767ec-7ee7-4573-8210-c49c1352ee9b")
 	)
 	(wire
 		(pts
@@ -3578,7 +3568,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:AO3401A")
-		(at 138.43 147.32 180)
+		(at 138.43 148.59 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3589,7 +3579,7 @@
 		(fields_autoplaced yes)
 		(uuid "45eb017d-b13a-4ceb-9e9c-253a7e2f3116")
 		(property "Reference" "Q2"
-			(at 132.08 146.0499 0)
+			(at 132.08 147.3199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3600,7 +3590,7 @@
 			)
 		)
 		(property "Value" "AO3401A"
-			(at 132.08 148.5899 0)
+			(at 132.08 149.8599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3611,7 +3601,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 133.35 145.415 0)
+			(at 133.35 146.685 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3624,7 +3614,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
-			(at 133.35 143.51 0)
+			(at 133.35 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3636,7 +3626,7 @@
 			)
 		)
 		(property "Description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
-			(at 138.43 147.32 0)
+			(at 138.43 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4232,7 +4222,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Zener")
-		(at 148.59 140.97 90)
+		(at 148.59 139.7 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4242,7 +4232,7 @@
 		(dnp no)
 		(uuid "87ee1c68-1a02-4db1-81db-151be84b8ecc")
 		(property "Reference" "D2"
-			(at 143.764 141.986 90)
+			(at 151.638 137.16 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4253,7 +4243,7 @@
 			)
 		)
 		(property "Value" "BZT52-C15"
-			(at 136.652 138.43 90)
+			(at 148.59 142.494 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4264,7 +4254,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
-			(at 148.59 140.97 0)
+			(at 148.59 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4275,7 +4265,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 148.59 140.97 0)
+			(at 148.59 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4286,7 +4276,7 @@
 			)
 		)
 		(property "Description" "Zener diode"
-			(at 148.59 140.97 0)
+			(at 148.59 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4323,7 +4313,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8d8c23a0-8095-4e2b-ac6a-3c443ce60280")
-		(property "Reference" "C1"
+		(property "Reference" "C3"
 			(at 220.9863 129.54 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4385,7 +4375,7 @@
 		(instances
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/72276164-1341-4c36-b4e6-9b9f0edc7f8e"
-					(reference "C1")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -5068,7 +5058,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f831ddeb-a98b-405c-a935-97ea150d4957")
-		(property "Reference" "C3"
+		(property "Reference" "C1"
 			(at 165.1 144.7862 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5132,7 +5122,7 @@
 		(instances
 			(project "BMU"
 				(path "/efb70416-ce55-4766-98ba-c3d23efcccb1/72276164-1341-4c36-b4e6-9b9f0edc7f8e"
-					(reference "C3")
+					(reference "C1")
 					(unit 1)
 				)
 			)
