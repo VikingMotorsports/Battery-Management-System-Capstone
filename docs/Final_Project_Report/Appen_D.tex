@@ -1,1 +1,14 @@
-This document lays out how someone is able 
+This document lays out how someone is able to ensure the \gls{bms} is fully operational.
+
+\subsection{Top Down Testing}
+
+Here are the sets of steps to assemble, activate, operate, and deactivate the \gls{bms}
+
+\subsubsection{Assembly}
+
+\begin{enumerate}
+	\item Attach the montioring boards to each of the battery modules. Ensure the exposed terminals of  the thermistors are \textbf{connected to \emph{negative} terminal of the cell they're measuring}.
+	\item  Connect the SHUNT resistor terminals and Pack connectors to the Current SHUNT boards IN and $V_{BUS}$ connectors respectively. 
+	\item Connect the daisy chain connectors of the monitoring boards to each other. Then connect the south connector of the first and the north connector of the last monitoring board to the COMM connectors on the \gls{bmu}.
+	\item 
+\end{enumerate}
